@@ -3,6 +3,6 @@
 const startBtn = document.getElementById('startBtn');
 
 startBtn.addEventListener('click', () => {
-window.location.href = '../questions.html';
+window.location.href = "./questions.html";
 });
 
