@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainquiz-container">
+
+        <header>
+            <a href="./highscore.html" id=leaderboard>
+                View Highscores 
+                <i class="fas fa-hand-point-left fa-lg"></i>
+            </a> 
+            <div class="time">
+                <p>Time:</p>
+                <span id="time_sec">50</span>
+            </div>
+        </header>
+
+            <section class="commonQuestion">
+                <div id="que_text">
+                    <h2>Commonly used data types DO NOT include: </h2>
+                </div>
+
+                <div class="optionList">
+                    <div class="option">
+                        <span>1 .</span>
+                        <p class="optionChoice" data-number="1"> Choice 1</p>
+                    </div>
+                    <div class="option">
+                        <span>2 .</span>
+                        <p class="optionChoice"  data-number="2">Choice 2</p>
+                    </div>
+                    <div class="option">
+                        <span>3 .</span>
+                        <p class="optionChoice"  data-number="3">Choice 3</p>
+                    </div>
+                    <div class="option">
+                        <span>4 .</span>
+                        <p class="optionChoice"  data-number="4">Choice 4</p>
+                    </div>
+                </div>
+                
+                <div class="line"></div>
+                <div class="answerChosen">
+                    <p id="answer"> </p>
+                </div>
+            </section>
+        
+    </div>
+
+    
+    <script src="js/question.js"></script>
+</body>
+</html>

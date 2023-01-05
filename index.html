@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--  whole app  -->
+    <main class="mainquiz-container">
+        <!--  Header Section -->
+        <header>
+            <a href="./highscore.html" id=leaderboard>
+                View Highscores 
+                <i class="fas fa-hand-point-left fa-lg"></i>
+            </a> 
+            <div class="time">
+                <p>Time:</p>
+                <span></span>
+            </div>
+        </header>
+
+        <!-- Starting Container -->
+        <div class="startInfo">
+            <h2>Coding Quiz Challenge</h2>
+            <div class="text-info">
+                <p>
+                    Try to answer the following code-related question within the time limit. <br>
+                    Keep in mind that incorrect answers will penalize your scores/time by ten seconds! 
+                </p>
+            </div>
+            <div class="btn">
+                <button id="startBtn" >Start Quiz</button>
+            </div>
+        </div>
+
+        <!----Question Container -->
+        <!--<div class="correctQuestion">
+                <h2>Arrays in JavaScript can be used to store _______________.</h2>
+            <div class="option-list">
+                <div class="option">
+                    <span>1.</span>
+                    <p>Numbers and Strings</p>
+                </div>
+                <div class="option">
+                    <span>2.</span>
+                    <p>Other Arrays</p>
+                </div>
+                <div class="option">
+                    <span>3.</span>
+                    <p>Booleans</p>
+                </div>
+                <div class="option">
+                    <span>4.</span>
+                    <p>All of the above</p>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="answer">
+                <p>Correct !</p>
+            </div>
+        </div>-->
+
+        <!------Incorrect Answer-->
+        <!--<div class="incorrectQuestion">
+                <h2>Arrays in JavaScript can be used to store _______________.</h2>
+            <div class="option-list">
+                <div class="option">
+                    <span>1 .</span>
+                    <p>Numbers and Strings</p>
+                </div>
+                <div class="option">
+                    <span>2 .</span>
+                    <p>Other Arrays</p>
+                </div>
+                <div class="option">
+                    <span>3 .</span>
+                    <p>Booleans</p>
+                </div>
+                <div class="option">
+                    <span>4 .</span>
+                    <p>All of the above</p>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="answer">
+                <p>Incorrect !</p>
+            </div>
+        </div>-->
+
+
+        <!-----Score-sheet Section------->
+        <!--<div class="scoreSheet-container">
+            <h2>All done!</h2>
+            <p>Your final score is 40.</p>
+            <form >
+                <label for="initials"> Enter initials:</label>
+                <input type="text" id="initials">
+                <button type="submit" >Submit</button>
+            </form>
+        </div>-->
+
+        
+
+        <!------Show High Score-section----->
+
+        <!--<div class="showHighScore-container">
+            <div class="highScore-details">
+                <h1>Highscores</h1>
+                <div class="person-score">
+                    <p>1. <span>CD - 9</span></p>
+                </div>
+                <div class="btns">
+                    <a href="" type="submit">Go Back</a>
+                    <button>Clear Highscores</button>
+                </div>
+            </div>
+        </div>-->
+           
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
