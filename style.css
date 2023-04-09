@@ -137,6 +137,10 @@ header a {
     cursor: pointer;
 }
 
+.allDone-container form button[disabled]:hover {
+    cursor: not-allowed;
+}
+
 .startInfo h2,
 .scoreSheet-container h2,
 .allDone-container h2
@@ -202,16 +206,6 @@ header a {
     padding: 30px;
     border-radius: 25px;
 }
-
-
-/* .option.correct {
-    background-color: rgb(212, 224, 78);
-    outline: green;
-}
-
-.option.incorrect {
-    background-color: red;
-} */
 
 .correctQuestion h2,
 .incorrectQuestion h2,

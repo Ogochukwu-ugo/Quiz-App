@@ -4,7 +4,7 @@ const question = document.getElementById("que_text");
 const choices = Array.from(document.getElementsByClassName("optionChoice"));
 
 const answerText = document.getElementById("answer");
-// const scoreText = document.getElementById("score");
+const scoreText = document.getElementById("score");
 
 
 let currentQuestion = {};
@@ -12,7 +12,7 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let userScore = 0;
+// let userScore = 0;
 
 let questions = [
     {
@@ -77,7 +77,7 @@ startQuiz =() => {
 getNewQuestion = () => {
 
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
-    // localStorage.setItem('mostRecentScore',  score);
+    localStorage.setItem('mostRecentScore',  score);
     //Go to the end page
     return window.location.assign("./alldone.html");
     }
@@ -99,7 +99,7 @@ getNewQuestion = () => {
 };
 
 choices.forEach(choice => {
-    choice.addEventListener("click", e => {
+    choice.addEventListener("click", (e) => {
         if (!acceptingAnswers) return;
 
         acceptingAnswers = false;
@@ -113,6 +113,8 @@ choices.forEach(choice => {
         // const classToApply = selectedAnswer === currentQuestion.answer ? "correct" : "incorrect"; //Using tenary operetor
         if (classToApply === 'correct') {
             incrementScore(CORRECT_BONUS);
+        } else {
+            decrementScore(CORRECT_BONUS);
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
@@ -128,22 +130,28 @@ choices.forEach(choice => {
 });
 
 
-incrementScore = num => {
-score +=num;
-userScore = score;
-console.log(userScore);
+incrementScore = (num) => {
+    score +=num;
+    scoreText.innerText = score;
 }
+
+decrementScore = (num) => {
+    score -=num;
+    scoreText.innerText = score;
+}
+
+  
 
 let time_sec = 50;
 let interval = setInterval(function(){
-document.getElementById('time_sec').innerHTML=time_sec;
-time_sec--;
-if (time_sec === 0){
-    clearInterval(interval);
-    document.getElementById('time_sec').innerHTML='Time Up';
-    // or...
-    //alert("You're out of time!");
-    return window.location.assign('/alldone.html');
+    document.getElementById('time_sec').innerHTML=time_sec;
+    time_sec--;
+    if (time_sec === 0){
+        clearInterval(interval);
+        document.getElementById('time_sec').innerHTML='Time Up';
+        // or...
+        //alert("You're out of time!");
+        return window.location.assign('/alldone.html');
     }
 }, 1000);
 
