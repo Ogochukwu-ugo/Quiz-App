@@ -1,10 +1,12 @@
-// const finalScore = localStorage.getItem('mostRecentScore');
-// document.getElementById('final-score').textContent = finalScore;
-
 const initials = document.getElementById('initials');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+const MAX_HIGH_SCORES =4;
+// console.log(highScores);
+
 finalScore.innerText = mostRecentScore;
 
 initials.addEventListener('keyup', () => {
@@ -14,5 +16,20 @@ initials.addEventListener('keyup', () => {
 
 const saveHighScore = e => {
     e.preventDefault();
-    console.log("Clicked saveHighScore")
-}
+    console.log("Clicked saveHighScore");
+
+    const score = {
+        score: Math.floor(Math.random() * 100),
+        name: initials.value
+    };
+    highScores.push(score);
+
+    highScores.sort( (a, b) => b.score - a.score);//If the second score is higher than the first, then the b will move higher than a.
+    
+    highScores.splice(4); //This is saying at index 4, remove anything after that.
+
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    window.location.assign('/');
+    // console.log(highScores);
+
+};
