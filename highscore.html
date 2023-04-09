@@ -28,20 +28,20 @@
 
         <div class="body-container">
             <div class="Highscore-container">
-                <div class="highscore-details">
-                    <h1>Highscores</h1>
-                    <div class="person-score">
-                        <p>1. <span>SJ - 43</span></p>
-                        <p>2. <span id="AJ">AJ - 38</span></p>
-                    </div>
+                <div class="highscore-details" id="highScores">
+                    <h1 id="finalScore">High Scores</h1>
+                    <ol class="person-score" id="highScoresList">
+                        
+                    </ol>
                     <div class="btns">
-                        <a href="" type="submit">Go Back</a>
-                        <button>Clear Highscores</button>
+                        <button id="back">Go Back</button>
+                        <button id="clearList">Clear Highscores</button>
                     </div>
                 </div>
             </div>
             
         </div>
     </div>
+    <script src="./highscore.js"></script>
 </body>
 </html>

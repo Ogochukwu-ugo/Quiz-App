@@ -274,100 +274,23 @@ header a {
     padding: 5px 20px;
 }
 
-.showHighScore-container {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.9);
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    height: 300px;
-    transform: translate(-50%, -50%);
-    border: 2px solid rgba(176, 176, 176, 0.65);
-    box-shadow: 8px 4px rgba(0, 0, 0, 0.1); 
-    padding:  30px;
-    border-radius: 25px;
-}
+.highscores {
+    margin-bottom: 5px;
+}  
 
-.highScore-details {
-    text-align: center;
-    padding:  34px;
-}
-
-.highScore-details h1 {
-    font-family: inter;
-    font-size: 40px;
-    font-weight: 600;
-    text-align: start;
-    padding: 10px 0px;
-}
-
-.highScore-details .person-score {
-    text-align: start;
-    font-family: inter, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 20px;
-}
-
-.highScore-details .person-score span, 
-.highscore-details .person-score span
-{
-    margin-left: 10px;
-    text-align: center;
-}
-
-#AJ {
-    margin-left: 7px;
-}
-
-.highScore-details .btns, 
 .highscore-details .btns
 {
+    display: flex;
     text-align: start;
     padding: 10px 0px;
-}
-
-.highScore-details .btns a {
-    text-decoration: none;
-    width: 100px;
-    height: 40px;
-    font-family: inter, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    background: #218380;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-.highScore-details .btns button {
-    font-family: inter, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    background: #218380;
-    color: white;
-    padding: 10px;
-    margin-left: 5px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
 .Highscore-container {
     position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.9);
     top: 50%;
     left: 50%;
     width: 300px;
-    height: 250px;
+    height: 280px;
     transform: translate(-50%, -50%);
     border: 2px solid rgba(176, 176, 176, 0.65);
     box-shadow:   8px 4px rgba(0, 0, 0, 0.1); 
@@ -391,15 +314,12 @@ header a {
 .highscore-details .person-score {
     text-align: start;
     font-family: inter, sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     padding: 10px 20px;
 }
 
-.highscore-details .btns a {
-    text-decoration: none;
-    width: 80px;
-    height: 25px;
+#back {
     font-family: inter, sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -428,8 +348,7 @@ header a {
 
 @media only screen and (max-width: 768px){
     .startInfo, .correctQuestion, .incorrectQuestion, .commonQuestion, 
-     .Highscore-container, 
-    .showHighScore-container{
+     .Highscore-container {
       padding: 15px;
       margin-top: 68px;
     }  
@@ -443,8 +362,7 @@ header a {
 
 @media (min-width: 320px) and (max-width: 600px){
     .startInfo, .correctQuestion, .incorrectQuestion, 
-     .Highscore-container, 
-    .showHighScore-container{
+     .Highscore-container{
       width: 280px;
       padding: 12px;
       margin-top: 24px;
