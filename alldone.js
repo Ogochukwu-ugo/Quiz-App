@@ -4,7 +4,7 @@ const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-const MAX_HIGH_SCORES =4;
+const MAX_HIGH_SCORES = 4;
 // console.log(highScores);
 
 finalScore.innerText = mostRecentScore;
@@ -29,7 +29,8 @@ const saveHighScore = e => {
     highScores.splice(4); //This is saying at index 4, remove anything after that.
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('/');
+    window.location.assign('./index.html');
     // console.log(highScores);
-
 };
+
+saveScoreBtn.addEventListener('click', saveHighScore);
